@@ -1,5 +1,4 @@
-
-    function logLocation() {
+function logLocation() {
         fetch('http://api.open-notify.org/iss-now.json')
           .then(res => res.json())
           .then(data => {
