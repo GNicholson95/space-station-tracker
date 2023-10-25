@@ -1,10 +1,9 @@
 function logLocation() {
-        fetch('http://api.open-notify.org/iss-now.json')
+     fetch('https://api.wheretheiss.at/v1/satellites/25544.json')
           .then(res => res.json())
           .then(data => {
-            console.log(data);
             const container = document.getElementById("location");
-            container.textContent = `Latitude: ${data.iss_position.latitude}, Longitude: ${data.iss_position.longitude}`;
+            container.textContent = `Latitude: ${data.latitude}, Longitude: ${data.longitude}`;
           });
       }
   
